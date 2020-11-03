@@ -30,7 +30,12 @@ class App extends React.Component {
       }),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        this.setState((prevState) => ({
+          todos: [...prevState.todos, data],
+          todo: "",
+        }));
+      });
   };
 
   componentDidMount() {
