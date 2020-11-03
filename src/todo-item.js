@@ -9,7 +9,7 @@ class TodoItem extends Component {
     return (
       <div className="todo-item">
         <input type="checkbox" />
-        <h3>{this.props.todo.title}</h3>;
+        <h3>{this.props.todo.title}</h3>
       </div>
     );
   }
