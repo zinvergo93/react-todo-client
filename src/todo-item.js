@@ -28,6 +28,9 @@ class TodoItem extends Component {
           onChange={this.toggleDone}
         />
         <p className={this.state.done ? "done" : ""}>{this.props.todo.title}</p>
+        <button onClick={() => this.props.deleteTodo(this.props.todo.id)}>
+          X
+        </button>
       </div>
     );
   }
